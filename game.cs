@@ -98,13 +98,13 @@
                 return new Character("Lumen", "Fire", 20);
 
             case "2":
-                return new Character("Ripple", "Water", 18);
+                return new Character("Ripple", "Water", 20);
 
             case "3":
-                return new Character("Gale", "Air", 10);
+                return new Character("Gale", "Air", 20);
 
             case "4":
-                return new Character("Grunchwood", "Earth", 19);
+                return new Character("Grunchwood", "Earth", 20);
 
             default:
                 Console.WriteLine();
@@ -266,7 +266,7 @@
                 return "swoosh";
 
             case "Earth":
-                return "Rock Smash";
+                return "darocksmash";
 
             default:
                 return "Elemental Strike";
