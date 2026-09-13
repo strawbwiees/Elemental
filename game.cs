@@ -17,8 +17,8 @@
             Console.WriteLine();
             Console.WriteLine("             MAIN MENU");
             Console.WriteLine();
-            Console.WriteLine("          1. START GAME");
-            Console.WriteLine("          2. EXIT");
+            Console.WriteLine("          [1] START GAME");
+            Console.WriteLine("          [2] EXIT");
             Console.WriteLine();
             Console.WriteLine("======================================");
             Console.Write("Choose an option: ");
@@ -79,14 +79,14 @@
     private Character ChooseCharacter(string player)
     {
         Console.WriteLine("======================================");
-        Console.WriteLine("          CHOOSE CHARACTER");
+        Console.WriteLine("          CHOOSE YOUR CHARACTER");
         Console.WriteLine("              " + player);
         Console.WriteLine("======================================");
         Console.WriteLine();
-        Console.WriteLine("1. Lumen   - Fire");
-        Console.WriteLine("2. Ripple  - Water");
-        Console.WriteLine("3. Gale  - Air");
-        Console.WriteLine("4. Grunchwood   - Earth");
+        Console.WriteLine("[1] Lumen   - Fire");
+        Console.WriteLine("[2] Ripple  - Water");
+        Console.WriteLine("[3] Gale  - Air");
+        Console.WriteLine("[4] Grunchwood   - Earth");
         Console.WriteLine();
         Console.Write("Choose your character: ");
 
@@ -139,7 +139,6 @@
 
             PlayerTurn(attacker, defender);
 
-            // Switch turns
             if (player1.IsAlive() && player2.IsAlive())
             {
                 Character temp = attacker;
@@ -162,18 +161,19 @@
         while (!validAction)
         {
             Console.WriteLine("======================================");
-            Console.WriteLine("  " + attacker.GetName() + "'S TURN");
+            Console.WriteLine("  " + attacker.GetName() + "'s Turn");
             Console.WriteLine("======================================");
 
             Console.WriteLine();
+            Console.WriteLine("Your HP: " + attacker.GetHealth() + "/100");
             Console.WriteLine("Opponent: " + defender.GetName());
             Console.WriteLine("Opponent HP: " + defender.GetHealth() + "/100");
 
             Console.WriteLine();
-            Console.WriteLine("1. Basic Attack");
-            Console.WriteLine("2. Special Attack");
-            Console.WriteLine("3. Defend");
-            Console.WriteLine("4. Display Status");
+            Console.WriteLine("[1] Basic Attack");
+            Console.WriteLine("[2] Special Attack");
+            Console.WriteLine("[3] Defend");
+            Console.WriteLine("[4] Display Status");
 
             Console.WriteLine();
             Console.Write("Choose an action: ");
@@ -246,7 +246,7 @@
         }
 
         Console.WriteLine();
-        Console.WriteLine("No Special Attacks remaining!");
+        Console.WriteLine("All spec9al attacks has been used!");
         Console.WriteLine("Choose another action.");
 
         return false;
@@ -294,6 +294,8 @@
         }
     }
 
+
+
     private void ShowWinner()
     {
         Console.Clear();
@@ -306,14 +308,22 @@
 
         if (player1.IsAlive())
         {
-            Console.WriteLine("WINNER: " + player1.GetName());
+            Console.WriteLine("WINNER: " + "Player 1: " + player1.GetName());
             Console.WriteLine("Element: " + player1.GetElement());
         }
         else
         {
-            Console.WriteLine("WINNER: " + player2.GetName());
+            Console.WriteLine("WINNER: " + "Player 2: " + player2.GetName());
             Console.WriteLine("Element: " + player2.GetElement());
         }
+
+        Console.WriteLine();
+
+        Console.WriteLine("--------------------------------------");
+        Console.WriteLine("          FINAL STATS");
+        Console.WriteLine("--------------------------------------");
+        Console.WriteLine("Player 1: " + player1.GetName() + " - Health: " + player1.GetHealth() + "/100");
+        Console.WriteLine("Player 2: " + player2.GetName() + " - Health: " + player2.GetHealth() + "/100");
 
         Console.WriteLine();
         Console.WriteLine("======================================");
