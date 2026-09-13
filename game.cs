@@ -173,7 +173,7 @@
             Console.WriteLine("[1] Basic Attack");
             Console.WriteLine("[2] Special Attack");
             Console.WriteLine("[3] Defend");
-            Console.WriteLine("[4] Display Status");
+            Console.WriteLine("[4] Stats");
 
             Console.WriteLine();
             Console.Write("Choose an action: ");
