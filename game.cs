@@ -54,8 +54,7 @@
         player1 = ChooseCharacter("PLAYER 1");
 
         Console.WriteLine();
-        Console.WriteLine("Player 1 selected: "
-            + player1.GetName() + " [" + player1.GetElement() + "]");
+        Console.WriteLine("Player 1 selected: " + player1.GetName() + " [" + player1.GetElement() + "]");
 
         Console.WriteLine();
         Console.WriteLine("Press ENTER for Player 2...");
@@ -66,8 +65,7 @@
         player2 = ChooseCharacter("PLAYER 2");
 
         Console.WriteLine();
-        Console.WriteLine("Player 2 selected: "
-            + player2.GetName() + " [" + player2.GetElement() + "]");
+        Console.WriteLine("Player 2 selected: " + player2.GetName() + " [" + player2.GetElement() + "]");
 
         Console.WriteLine();
         Console.WriteLine("Press ENTER to begin the battle...");
@@ -166,6 +164,7 @@
 
             Console.WriteLine();
             Console.WriteLine("Your HP: " + attacker.GetHealth() + "/100");
+            Console.WriteLine();
             Console.WriteLine("Opponent: " + defender.GetName());
             Console.WriteLine("Opponent HP: " + defender.GetHealth() + "/100");
 
@@ -281,7 +280,7 @@
                 return "Lava pool";
 
             case "Water":
-                return "Flush";
+                return "Toilet flush";
 
             case "Air":
                 return "Tornado";
