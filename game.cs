@@ -159,7 +159,7 @@
         while (!validAction)
         {
             Console.WriteLine("======================================");
-            Console.WriteLine("  " + attacker.GetName() + "'s Turn");
+            Console.WriteLine("           " + attacker.GetName() + "'s Turn");
             Console.WriteLine("======================================");
 
             Console.WriteLine();
